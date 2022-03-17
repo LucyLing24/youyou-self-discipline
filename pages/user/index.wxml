@@ -1,0 +1,23 @@
+<!--pages/user/index.wxml-->
+
+<view class="container" data-weui-theme="{{theme}}">
+  <view class="index">
+    <view class="index-hd">
+      <image class="index-logo" src="../../resource/images/barLogo/test.jpg"></image>
+      <view class="index-desc">       很高兴见到你   </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="page-section-spacing">
+        <button class="mini-btn" type="default" size="mini">按钮</button>
+        <button class="mini-btn" type="default" size="mini">按钮</button>
+        <button class="mini-btn" type="default" size="mini">按钮</button>
+    </view>
+    <view class="page-section-spacing">
+        <button>统计</button>
+    </view>
+    <view class="page-section-spacing">
+        <button>好友</button>
+    </view>
+  </view>
+</view>
