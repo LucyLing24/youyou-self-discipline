@@ -3,7 +3,7 @@
 <view class="container" data-weui-theme="{{theme}}">
   <view class="index">
     <view class="index-hd">
-      <image class="index-logo" src="../../resource/images/barLogo/test.jpg"></image>
+      <image class="index-logo" src=""></image>
       <view class="index-desc">       很高兴见到你   </view>
     </view>
   </view>

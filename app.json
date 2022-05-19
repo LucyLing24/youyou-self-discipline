@@ -1,34 +1,36 @@
 {
     "pages": [
+        
         "pages/clockin/index",
+        "pages/welcome/index",
         "pages/game/index",
         "pages/user/index"
     ],
     "subPackages": [
         {
-            "root": "pages/clockin/clockinPackage",
+            "root": "pages/clockinPackage",
             "pages": [
-              "pages/newClockin/newClockin",
-              "pages/showDetails/showDetails"
+                "newClockin/newClockin",
+                "showDetails/showDetails"
             ]
         },
         {
-            "root": "pages/game/gamePackage",
+            "root": "pages/gamePackage",
             "pages": [
-              "pages/2048/2048",
-              "pages/driftingBottle/driftingBottle",
-              "pages/gobang/gobang",
-              "pages/shareResource/shareResource"
+                "2048/2048",
+                "driftingBottle/driftingBottle",
+                "gobang/gobang",
+                "shareResource/shareResource"
             ]
         },
         {
-            "root": "pages/user/userPackage",
+            "root": "pages/userPackage",
             "pages": [
-              "pages/rankBoard/rankBoard",
-              "pages/setup/setup",
-              "pages/setup/loadin/loadin",
-              "pages/setup/loadout/loadout",
-              "pages/statisticsBoard/statisticsBoard"
+                "rankBoard/rankBoard",
+                "setup/setup",
+                "setup/loadin/loadin",
+                "setup/loadout/loadout",
+                "statisticsBoard/statisticsBoard"
             ]
         }
     ],
@@ -39,30 +41,30 @@
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
-      "color": "red",
-      "selectedColor": "yellow",
-      "borderStyle": "white",
-      "backgroundColor": "black",
-      "list": [
-        {
-          "pagePath": "pages/clockin/index",
-          "iconPath": "resource/images/barLogo/test.jpg",
-          "selectedIconPath": "resource/images/barLogo/test.jpg",
-          "text": "打卡"
-        },
-        {
-          "pagePath": "pages/game/index",
-          "iconPath": "resource/images/barLogo/test.jpg",
-          "selectedIconPath": "resource/images/barLogo/test.jpg",
-          "text": "游戏"
-        },
-        {
-          "pagePath": "pages/user/index",
-          "iconPath": "resource/images/barLogo/test.jpg",
-          "selectedIconPath": "resource/images/barLogo/test.jpg",
-          "text": "个人"
-        }
-      ]
+        "color": "red",
+        "selectedColor": "yellow",
+        "borderStyle": "white",
+        "backgroundColor": "black",
+        "list": [
+            {
+                "pagePath": "pages/clockin/index",
+                "iconPath": "./resource/images/clockin/clipboard-nag.png",
+                "selectedIconPath": "./resource/images/clockin/clipboard.png",
+                "text": "打卡"
+            },
+            {
+                "pagePath": "pages/game/index",
+                "iconPath": "./resource/images/game/board-game-nag.png",
+                "selectedIconPath": "./resource/images/game/board-game.png",
+                "text": "游戏"
+            },
+            {
+                "pagePath": "pages/user/index",
+                "iconPath": "./resource/images/user/account-nag.png",
+                "selectedIconPath": "./resource/images/user/account.png",
+                "text": "个人"
+            }
+        ]
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json"

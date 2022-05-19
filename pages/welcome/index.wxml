@@ -1,0 +1,11 @@
+<!--pages/welcome/index.wxml-->
+
+<view class="title">
+  <image class="title_image" src="/resource/images/welcome/logopic.png"></image>
+  
+  <button class='bt' open-type='openSetting'>
+    <image class='btnImg' src='../../resource/images/welcome/wechat.png'></image>
+    <view>微信一键登录</view>
+  </button>
+
+</view> 

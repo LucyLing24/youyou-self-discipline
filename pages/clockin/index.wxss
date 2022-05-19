@@ -1,63 +1,110 @@
 /* pages/clockin/index.wxss */
 @import "../../resource/lib/weui.wxss";
-.page-section-spacing{
-    margin-top: 0px;
-  }
-  .scroll-view_H{
-    white-space: nowrap;
-  }
-  .scroll-view-item{
-    height: 100px;
-  }
-  .scroll-view-item_H{
-    display: inline-block;
-    width: 100%;
-    height: 50px;
-  }
-  
-  .demo-text-1{
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background-color:#264b99;
-    color: #FFFFFF;
-    font-size: 18px;
-  }
-  .demo-text-1:before{
-    content: '读书 1h';
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-  }
-  .demo-text-2{
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background-color: #264b99;
-    color: #FFFFFF;
-    font-size: 18px;
-  }
-  .demo-text-2:before{
-    content: '写题 2h';
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-  }
-  .demo-text-3{
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background-color: #264b99;
-    color: #FFFFFF;
-    font-size: 18px;
-  }
-  .demo-text-3:before{
-    content: '运动 1h';
-    position:absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-  }
-  
+
+.container.empty {
+  background: white;
+}
+
+.background {
+  width: 100%;
+  margin-top: 5vh;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle {
+  margin-top: 9px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-cell {
+  padding: 0;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  align-self: flex-start;
+  transform: translateY(5px);
+}
+
+.todo-info {
+  width: auto;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column
+}
+
+.todo-info_title {
+  font-size: 18px;
+}
+.todo-info_author {
+  width: 70px;
+  height: 100%;
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+}
+.todo-info_award {
+  font-size: 10px;
+}
+.todo-info_desc {
+  font-size: 10px;
+  color: #BDBDBD;
+}
+.star {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.starBtn .weui-slideview__btn {
+  background-color: gold;
+}
+
+.file {
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+  margin-right: 22px;
+}
+
+.btn-normal{
+  margin: 10%;
+  background-color: #A7C18C;
+  color: white;
+}
+
+.btn-small{
+  margin: 5%;
+  background-color: #A7C18C;
+  color: white;
+}
+
+.btn-hover{
+  background-color: lightgray;
+  color: white;
+}
+
+.todo-info_title.done {
+  text-decoration: line-through;
+  color: #8D8D8D;
+}

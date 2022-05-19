@@ -1,3 +1,6 @@
 {
-    "navigationBarTitleText": "打卡"
-}
+    "usingComponents": {
+      "mp-badge": "../../resource/lib/badge/badge",
+      "mp-slideview": "../../resource/lib/slideview/slideview"
+    }
+  }
