@@ -1,4 +1,6 @@
 {
+    "miniprogramRoot": "miniprogram/",
+    "cloudfunctionRoot": "cloudfunctions/",
     "description": "项目配置文件，详见文档：%s",
     "packOptions": {
         "ignore": []
@@ -22,9 +24,9 @@
         "uploadWithSourceMap": true,
         "compileHotReLoad": false,
         "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": true,
-        "useApiHook": true,
-        "useApiHostProcess": true,
+        "useMultiFrameRuntime": false,
+        "useApiHook": false,
+        "useApiHostProcess": false,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -43,7 +45,7 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.17.0",
-    "appid": "wxa04d988b475a7653",
+    "appid": "wxb9599bd0478f1238",
     "projectname": "悠游自律",
     "debugOptions": {
         "hidedInDevtools": []

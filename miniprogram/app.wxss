@@ -1,0 +1,3 @@
+/**app.wxss**/
+@import "./resource/lib/weui.wxss";
+
