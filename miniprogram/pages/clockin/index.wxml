@@ -16,7 +16,7 @@
 
   <view class="form-group_label">
     未完成的任务
-    <mp-badge style="margin-left: 5px;" />
+    <mp-badge content="{{incompleteMissions.length}}" style="margin-left: 5px;" />
   </view>
   
   <view class="form-group">

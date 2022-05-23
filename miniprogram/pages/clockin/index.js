@@ -3,13 +3,43 @@ Page({
     // 存储请求结果
     data: {
       allMissions: [], // 用户的所有待办事项
-      incompleteMissions: [], // 未完成待办事项
-      finishedMissions: [], // 已完成待办事项
+      incompleteMissions: [{
+        title: "123",
+        award: 20,
+        desc: "123"
+      },{
+        title: "321",
+        award: 20,
+        desc: "321"
+      }], // 未完成待办事项
+      finishedMissions: [{
+        title: "123",
+        award: 20,
+        desc: "123"
+      },{
+        title: "321",
+        award: 20,
+        desc: "321"
+      }], // 已完成待办事项
       kirbyOpenId : getApp().globalData.kirbyOpenId,
       deeOpenId : getApp().globalData.deeOpenId,
     },
-  
+    
+    onLoad: function (options) {
+      console.log(111)
+      wx.cloud.callFunction({
+        name: 'getOpenId',
+        config:{
+          env:'cloud1-0g6c5avn84232189'
+        },
+        complete: res=>{
+          console.log(res)
+        }
+      })
+    },
+    /*
     async onShow() {
+        console.log(1234)
         // 查询并展示待办列表
         const db = await getApp().database()
         db.collection(getApp().globalData.collectionMissionList).get().then(dataGot => {
@@ -36,7 +66,7 @@ Page({
         }],
       })
     },
-  
+    */
     // 响应左划按钮事件
     async slideButtonTap(e) {
       // 得到触发事件的待办序号
