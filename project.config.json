@@ -24,9 +24,9 @@
         "uploadWithSourceMap": true,
         "compileHotReLoad": false,
         "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": false,
-        "useApiHook": false,
-        "useApiHostProcess": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -56,6 +56,7 @@
         "servePath": ""
     },
     "isGameTourist": false,
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
     "condition": {
         "search": {
             "list": []

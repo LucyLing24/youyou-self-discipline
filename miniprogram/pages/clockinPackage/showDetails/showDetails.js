@@ -4,7 +4,8 @@ Page({
     data: {
       _id: '',
       todo: {
-        title: ''
+        title: '',
+        desc:''
       },
     },
   
@@ -15,8 +16,29 @@ Page({
           _id: options.id
         })
       }
+      this.setTodoData();
     },
-  
+    setTodoData(){
+      console.log(this.data._id);
+      wx.cloud.callFunction({
+        name: 'getSingleMission',
+        config: {
+          env: getApp().globalData.env
+        },
+        data:{
+          _id: this.data._id
+        }
+      }).then((resp) => {
+        console.log(resp);
+        this.setData({
+          todo:{
+            title: resp.result.data[0].title,
+            desc: resp.result.data[0].desc,
+          }
+        })
+      })
+    }
+    /*
     // 根据 _id 值查询并显示待办数据
     async onShow() {
       if (this.data._id.length > 0) {
@@ -36,4 +58,5 @@ Page({
         })
       }
     },
+    */
   })

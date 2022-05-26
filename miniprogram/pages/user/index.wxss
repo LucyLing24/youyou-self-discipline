@@ -1,19 +1,1 @@
 /* pages/user/index.wxss */
-
-@import "../../resource/lib/weui.wxss";
-.page-section-spacing{
-    margin-top: 0px;
-  }
-.weui-agree__link {
-  display: inline;
-  color: var(--weui-LINK);
-}
-button{
-    color:white;
-    background-color:#264b99;
-    size:18px
-}
-.mini-btn{
-    margin-right: 20px;
-    align-items: center;
-  }

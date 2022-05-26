@@ -1,7 +1,9 @@
 {
     "pages": [
-        "pages/welcome/index",
+        
+        
         "pages/clockin/index",
+        "pages/welcome/index",
         "pages/game/index",
         "pages/user/index"
     ],
