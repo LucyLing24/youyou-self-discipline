@@ -16,6 +16,13 @@
                     "name": "打卡主页面",
                     "pathName": "pages/clockin/index",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "漂流瓶",
+                    "pathName": "pages/gamePackage/driftingBottle/driftingBottle",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }

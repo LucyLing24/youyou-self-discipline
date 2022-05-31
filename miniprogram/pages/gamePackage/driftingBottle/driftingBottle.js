@@ -5,9 +5,64 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        throwBottleData: "",
+        getBottleData: "",
+        isThrowVisible: true,
+        isGetVisible: false
     },
-
+    throwBottle(){
+        this.setData({
+            isGetVisible : false,
+            isThrowVisible : true
+        });
+    },
+    throwInput(e){
+        this.setData({
+            throwBottleData: e.detail.value
+        })
+    },
+    getBottle(){
+        this.setData({
+            isGetVisible : true,
+            isThrowVisible : false
+        });
+        wx.cloud.callFunction({
+            name: "getRandomBottle",
+            config: {
+                env: getApp().globalData.env
+            }
+        }).then((resp) => {
+            const message = "当前为用户" + resp.result.openId 
+            + "的消息： \n" + resp.result.message;
+            // console.log(message);
+            this.setData({
+                getBottleData: message
+            })
+        })
+    },
+    getInput(e){
+        this.setData({
+            getBottleData: e.detail.value
+        })
+    },
+    submitBottle(){
+        console.log(123213);
+        wx.cloud.callFunction({
+            name: 'throwBottle',
+            config: {
+                env: getApp().globalData.env
+            },
+            data:{
+                openId: getApp().globalData.openId,
+                message: this.data.throwBottleData
+            }
+        }).then((resp) => {
+            console.log(resp);
+            wx.showToast({
+              title: '添加成功',
+            })
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

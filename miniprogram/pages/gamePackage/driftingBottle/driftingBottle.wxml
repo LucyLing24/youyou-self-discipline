@@ -1,2 +1,18 @@
 <!--pages/game/gamePackage/pages/driftingBottle/driftingBottle.wxml-->
-
+<view class = "container">
+    <image src="../../../resource/images/game/drifting_bottle.jpg" class="bottle_pic"/>
+    <view class = "select_button"> 
+        <view class="button" bindtap="throwBottle">投掷漂流瓶</view>
+        <view class="button" bindtap="getBottle">打捞漂流瓶</view>
+    </view>
+    <block wx:if="{{isThrowVisible}}">
+        <textarea class="textarea"
+        placeholder="请输入要放在漂流瓶里的内容"
+        bindinput="throwInput">
+        </textarea>
+        <view class="button" bindtap="submitBottle"> 投掷</view>
+    </block>
+    <block wx:if="{{isGetVisible}}">
+        <textarea class="textarea" value="{{getBottleData}}"></textarea>
+    </block>
+</view>
