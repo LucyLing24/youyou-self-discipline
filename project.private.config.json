@@ -23,6 +23,13 @@
                     "name": "漂流瓶",
                     "pathName": "pages/gamePackage/driftingBottle/driftingBottle",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "2048",
+                    "pathName": "pages/gamePackage/2048/2048",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }
