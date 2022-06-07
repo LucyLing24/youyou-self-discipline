@@ -1,2 +1,28 @@
 <!--pages/user/userPackage/pages/statisticsBoard/statisticsBoard.wxml-->
-<text>pages/user/userPackage/pages/statisticsBoard/statisticsBoard.wxml</text>
+
+<view class="container">
+  <view class="form-group">
+    <view class="form-cell">
+      <view class="containers">
+        <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec3 }}"></ec-canvas>
+      </view>
+    </view>
+  </view>
+
+  <view class="form-group">
+    <view class="form-cell">
+      <view class="containers">
+        <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+      </view>
+    </view>
+  </view>
+
+  <view class="form-group">
+    <view class="form-cell">
+      <view class="containers">
+        <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec2 }}"></ec-canvas>
+      </view>
+    </view>
+  </view>
+  
+</view>

@@ -1,1 +1,55 @@
 /* pages/user/userPackage/pages/statisticsBoard/statisticsBoard.wxss */
+
+.form-cell_title {
+  margin-bottom: 10px;
+  font-size: medium;
+}
+
+.form-cell_desc {
+  font-size: small;
+  color: lightgray;
+}
+
+.footer {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  border-top: #A7C18C;
+}
+
+.footer view {
+  width: 50%;
+  height: 100%;
+  padding-top: 2vh;
+  text-align: center;
+}
+
+.list {
+  background: white;
+}
+
+.edit {
+  color: white;
+  background: #A7C18C;
+}
+
+ec-canvas {
+  width: 100%;
+  height: 500rpx;
+}
+.containers {
+  position:relative;
+  top: 10rpx;
+  bottom: 0;
+  left: 30rpx;
+  right: 30rpx;
+
+
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+} 

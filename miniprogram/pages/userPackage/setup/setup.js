@@ -5,7 +5,12 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+      userInfor:{
+        "phone":"123456789",
+        "name":"猫猫酱",
+        "gender":0,
+        "pic":"/resource/images/user/kitty.jpg"
+      }
     },
 
     /**

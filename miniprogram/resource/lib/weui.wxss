@@ -3150,7 +3150,7 @@ a.weui-media-box:active {
   padding: .15em .4em;
   min-width: 8px;
   border-radius: 18px;
-  background-color: var(--weui-RED);
+  background-color: var(--weui-ORANGE);
   color: #fff;
   line-height: 1.2;
   text-align: center;

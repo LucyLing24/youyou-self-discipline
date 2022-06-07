@@ -2,15 +2,15 @@
 
 <wxs module="util" src="../util.wxs" />
 
-<view class="container empty">
+<view class="container empty"  wx:if="{{allMissions.length === 0}}">
   <image class="background" src="../../resource/images/clockin/thinking.png" mode="aspectFit" />
-  <view class="title">暂无打卡</view>
+  <view class="title">暂无打卡 </view>
   <view class="subtitle">请添加第一个打卡任务吧！</view>
   <button class="btn-normal" hover-class="btn-hover" bindtap="toAddPage">添加新任务</button>
 </view>
 
-<view class="container">
-  <image style="position: relative; height: 100%; width: 100%; top: 0;" mode="widthFix" src="../../resource/images/clockin/clipboard.png"/>
+<view class="container" wx:if="{{allMissions.length > 0}}">
+  <image style="position: relative; height: 60%; width: 50%; top: 0; margin-top: 25rpx;" mode="widthFix" src="../../resource/images/clockin/smiling-face.png"/>
   <button class="btn-small" hover-class="btn-hover" bindtap="toAddPage">添加新任务</button>
 
 
@@ -18,25 +18,22 @@
     未完成的任务
     <mp-badge content="{{incompleteMissions.length}}" style="margin-left: 5px;" />
   </view>
-  
-  <view class="form-group">
+  <view class="form-group"wx:if="{{incompleteMissions.length > 0}}">
     <view class="form-cell" wx:for="{{incompleteMissions}}" wx:key="index">
       <mp-slideview buttons="{{slideButtons}}" data-index='{{index}}' bindbuttontap="slideButtonTap">
         <view class="slide" data-index="{{index}}" bindtap="toDetailPage">
-          <image class="checkbox" data-index='{{index}}' src="../../resource/images/clockin/clipboard.png" catchtap="finishTodo" />
+          <image class="checkbox" data-index='{{index}}' src="../../resource/images/clockin/dry-clean.png" catchtap="finishTodo" />
           <view class="todo-info">
             <view class="todo-info_title">
-              {{util.filterStr(item.title, 10)}}
+              {{util.filterStr(item.title, 10)}} 
+              </view>
+              <view class="todo-info_time">
+                  {{item.time}} 小时
               </view>
                 <view class="todo-info_award">
-                  {{item.award}} 积分
+                  {{item.award}} {{item.type}} 
               </view>
             <view class="todo-info_desc">{{util.filterStr(item.desc, 10)}}</view>
-          </view>
-
-          <view class="todo-info_author">
-            <image style="position: absolute; height: 100%; width: 100%; bottom: 0;"  wx:if="{{item._openid === kirbyOpenId}}" mode="widthFix" src="../../resource/images/clockin/clipboard.png"/>
-            <image style="position: absolute; height: 100%; width:100%; bottom: 0;" wx:if="{{item._openid === deeOpenId}}" mode="widthFix" src="../../resource/images/clockin/clipboard.png"/>
           </view>
 
           <image wx:if="{{item.star}}" class="star" src="../../resource/images/clockin/clipboard.png" />
@@ -45,27 +42,29 @@
       </mp-slideview>
     </view>
   </view>
+
+
   <view class="form-group_label">
     已完成的任务
     <mp-badge content="{{finishedMissions.length}}" style="margin-left: 5px;" />
   </view>
+
   <view class="form-group" wx:if="{{finishedMissions.length > 0}}">
     <view class="form-cell" wx:for="{{finishedMissions}}" wx:key="index">
       <mp-slideview buttons="{{slideButtons}}" data-index='{{index}}' bindbuttontap="slideButtonTapBottom">
-        <view class="slide" data-index="{{index}}">
+        <view class="slide" data-index="{{index}}"  bindtap="toDetailPage">
+          <image class="checkbox" data-index='{{index}}' src="../../resource/images/clockin/dry-clean.png" catchtap="incompleteTodo" />
           <view class="todo-info">
             <view class="todo-info_title">
               {{util.filterStr(item.title, 10)}}
             </view>
+            <view class="todo-info_time">
+                  {{item.time}} 小时
+              </view>
             <view class="todo-info_award">
-              {{item.award}} 积分
+              {{item.award}} {{item.type}} 
             </view>
             <view class="todo-info_desc">{{util.filterStr(item.desc, 10)}}</view>
-          </view>
-
-          <view class="todo-info_author">
-              <image style="position: absolute;height: 100%; width:100%; bottom: 0;" wx:if="{{item._openid === kirbyOpenId}}" mode="widthFix" src="../../resource/images/clockin/clipboard.png"/>
-              <image style="position: absolute; height: 100%; width:100%; bottom: 0;" wx:if="{{item._openid === deeOpenId}}" mode="widthFix" src="../../resource/images/clockin/clipboard.png"/>
           </view>
 
           <image wx:if="{{item.star}}" class="star" src="../../resource/images/clockin/clipboard.png" />

@@ -1,23 +1,46 @@
 <!--pages/user/index.wxml-->
 
-<view class="container" data-weui-theme="{{theme}}">
-  <view class="index">
-    <view class="index-hd">
-      <image class="index-logo" src=""></image>
-      <view class="index-desc">       很高兴见到你   </view>
-    </view>
+<view class="page-wrap">
+  <view class="page-bg">
+    <image class="page-bg" src="../../resource/images/user/person3.gif" mode="aspectFill"></image>
   </view>
-  <view class="page-section">
-    <view class="page-section-spacing">
-        <button class="mini-btn" type="default" size="mini">按钮</button>
-        <button class="mini-btn" type="default" size="mini">按钮</button>
-        <button class="mini-btn" type="default" size="mini">按钮</button>
-    </view>
-    <view class="page-section-spacing">
-        <button>统计</button>
-    </view>
-    <view class="page-section-spacing">
-        <button>好友</button>
+   <view class="head-wrap">
+  </view>
+
+  <view class="page-menu">
+    <view>
+        <image bindtap="cash"class="littleIcon" src="../../resource/images/user/coin.png" ></image>
+        <image bindtap="somehow"class="littleIcon" src="../../resource/images/user/crown.png" ></image>
+        <image bindtap="changeLook"class="littleIcon" src="../../resource/images/user/magic-wand.png" ></image>
+        <image bindtap="rename"class="littleIcon" src="../../resource/images/user/pen-tool.png" ></image>
+        <text class="littleIcon">昵称：{{username}}</text>
+    </view> 
+    <view class="tx">智力值：{{value.intelligenceValue}} </view>
+    <view class="tx">体力值：{{value.strengthValue}} </view>
+    <view class="tx">魅力值：{{value.charmValue}} </view>
+    <view class="tx-end">健康值：{{value.healthValue}} </view>
+
+    <view>
+      <button class='bt1'  bindtap="stat">
+        <image class='btnImg' src='../../resource/images/user/stat.png'></image>
+        <view>统计</view>
+      </button>
+      <button class='bt2'  bindtap="ranking">
+        <image class='btnImg' src='../../resource/images/user/ranking.png'></image>
+        <view>排名</view>
+      </button>
+      <button class='bt3' bindtap="setting">
+          <image class='btnImg' src='../../resource/images/user/setting.png'></image>
+          <view>设置</view>
+        </button>
     </view>
   </view>
 </view>
+
+
+
+
+
+
+
+

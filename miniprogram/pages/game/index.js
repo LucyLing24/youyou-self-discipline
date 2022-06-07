@@ -1,11 +1,41 @@
 // pages/game/index.js
 Page({
-
     /**
      * 页面的初始数据
      */
     data: {
-
+        indicatorDots: true,
+        autoplay: true,
+        interval: 5000,
+        duration: 1000,
+        imgUrls: [
+           '../../resource/images/game/sildepic3.jpg',
+           '../../resource/images/game/sildepic4.jpg',
+           '../../resource/images/game/sildepic1.jpg',
+           '../../resource/images/game/sildepic2.jpg'
+         ],
+        functions: [
+            {
+              "name": "漂流瓶",
+              "pic_url": '../../resource/images/game/olo.jpg',
+              "page_url":'../gamePackage/driftingBottle/driftingBottle'
+            },
+            {
+              "name": "资源大厅",
+              "pic_url": '../../resource/images/game/book.jpg',
+              "page_url":'../gamePackage/shareResource/shareResource'
+            },
+            {
+              "name": "双人五子棋",
+              "pic_url": '../../resource/images/game/friends.jpg',
+              "page_url":'../gamePackage/gobang/gobang'
+            },
+            {
+              "name": "2048小游戏",
+              "pic_url": '../../resource/images/game/game.jpg',
+              "page_url":'../gamePackage/2048/2048'
+            }
+          ]
     },
 
     /**
@@ -62,5 +92,15 @@ Page({
      */
     onShareAppMessage: function () {
 
-    }
+    },
+
+
+  /**
+   * 图片点击跳转
+   */
+  toPage(e) {
+    wx.navigateTo({
+      url: e.currentTarget.dataset.name
+    })
+  }
 })

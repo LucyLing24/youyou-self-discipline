@@ -1,7 +1,8 @@
 {
     "pages": [
-        "pages/welcome/index",
+      
         "pages/clockin/index",
+        "pages/welcome/index",
         "pages/game/index",
         "pages/user/index"
     ],
@@ -27,8 +28,6 @@
             "pages": [
                 "rankBoard/rankBoard",
                 "setup/setup",
-                "setup/loadin/loadin",
-                "setup/loadout/loadout",
                 "statisticsBoard/statisticsBoard"
             ]
         }
@@ -43,7 +42,7 @@
         "color": "red",
         "selectedColor": "yellow",
         "borderStyle": "white",
-        "backgroundColor": "black",
+        "backgroundColor": "white",
         "list": [
             {
                 "pagePath": "pages/clockin/index",

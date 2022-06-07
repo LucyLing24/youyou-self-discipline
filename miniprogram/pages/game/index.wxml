@@ -1,2 +1,19 @@
 <!--pages/game/index.wxml-->
 
+<scroll-view scroll-y="true" class="container">
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='function_container'>
+    <view class='function_item' wx:for="{{functions}}" wx:for-index="idx" wx:for-item="function">
+        <image bindtap="toPage" data-name='{{function.page_url}}' class='function_img' src='{{function.pic_url}}'></image>
+        <view class='function_name'>{{function.name}}</view>
+    </view>
+  </view>
+</scroll-view>

@@ -2,24 +2,44 @@
 Page({
     // 存储请求结果
     data: {
-      allMissions: [], // 用户的所有待办事项
-      incompleteMissions: [{
-        title: "123",
+      allMissions: [{
+        title: "学习",
         award: 20,
-        desc: "123"
+        desc: "123",
+        type:"智力值",
+        time:11
       },{
-        title: "321",
+        title: "运动",
         award: 20,
-        desc: "321"
+        desc: "321",
+        type:"体力值",
+        time:12
+      }], // 用户的所有待办事项
+      incompleteMissions: [{
+        title: "唱歌",
+        award: 20,
+        desc: "123",
+        type:"魅力值",
+        time:1
+      },{
+        title: "学习",
+        award: 20,
+        desc: "321",
+        type:"智力值",
+        time:2
       }], // 未完成待办事项
       finishedMissions: [{
-        title: "123",
+        title: "跑步",
         award: 20,
-        desc: "123"
+        desc: "123",
+        type:"健康值",
+        time:3
       },{
-        title: "321",
+        title: "读书",
         award: 20,
-        desc: "321"
+        desc: "321",
+        type:"智力值",
+        time:4
       }], // 已完成待办事项
       kirbyOpenId : getApp().globalData.kirbyOpenId,
       deeOpenId : getApp().globalData.deeOpenId,

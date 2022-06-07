@@ -1,2 +1,31 @@
 <!--pages/user/userPackage/pages/setup/setup.wxml-->
-<text>pages/user/userPackage/pages/setup/setup.wxml</text>
+<view class="top">
+    <view>
+      <image class="touxiang" src="{{userInfor.pic}}"></image>
+    </view>
+</view>
+
+<view class="top1">
+    <view class="view">
+        <view class="item">
+            <text class="title-style">昵称</text>
+            <text>{{userInfor.name}}</text>
+        </view>
+        <view class="item" >
+            <text class="title-style" >电话</text>
+            <text wx:if="{{userInfor.phone == null}}">待填写</text>
+            <text wx:if="{{userInfor.phone != null}}">{{userInfor.phone}}</text>
+        </view>
+        <view class="item">
+            <text class="title-style" >性别</text>
+            <text>{{userInfor.gender == 0 ? '女' : '男'}}</text>
+        </view>
+      </view>
+</view>
+
+<view class="border"></view>
+<view class="content"   bindtap="info">  
+fdsg
+</view>
+
+<button bindtap="back" hover-class="btn-color">退出账号</button>

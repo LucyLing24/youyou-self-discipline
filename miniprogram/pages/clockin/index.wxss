@@ -54,12 +54,11 @@
 .todo-info_title {
   font-size: 18px;
 }
-.todo-info_author {
-  width: 70px;
-  height: 100%;
-  position: absolute;
+.todo-info_time {
+  font-size: 18px;
+  position:absolute;
   right: 10%;
-  bottom: 0;
+  color:#fdd85c;
 }
 .todo-info_award {
   font-size: 10px;

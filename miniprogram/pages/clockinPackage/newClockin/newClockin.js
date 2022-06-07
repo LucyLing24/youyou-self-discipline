@@ -56,7 +56,7 @@ Page({
       }
       if (this.data.award <= 0) {
         wx.showToast({
-          title: '一定要有奖励！',
+          title: '一定要填写数值！',
           icon: 'error',
           duration: 2000
         })

@@ -5,7 +5,20 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+      username:"瓏酱007",
+      person:[
+        "../../resource/images/user/person1.gif",
+        "../../resource/images/user/person2.gif",
+        "../../resource/images/user/person3.gif",
+        "../../resource/images/user/person4.gif",
+        "../../resource/images/user/person5.gif"
+      ],
+      value:{
+        "intelligenceValue":212,
+        "strengthValue":233,
+        "charmValue":3224,
+        "healthValue":45,
+      }
     },
 
     /**
@@ -62,5 +75,25 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+
+    // 跳转响应函数
+    setting() {
+      wx.navigateTo({
+        url: '../userPackage/setup/setup',
+      })
+    },
+
+    stat() {
+      wx.navigateTo({
+        url: '../userPackage/statisticsBoard/statisticsBoard',
+      })
+    },
+
+    ranking() {
+      wx.navigateTo({
+        url: '../userPackage/rankBoard/rankBoard',
+      })
     }
+
 })
