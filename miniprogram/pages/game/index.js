@@ -9,10 +9,10 @@ Page({
         interval: 5000,
         duration: 1000,
         imgUrls: [
-           '../../resource/images/game/sildepic3.jpg',
-           '../../resource/images/game/sildepic4.jpg',
            '../../resource/images/game/sildepic1.jpg',
-           '../../resource/images/game/sildepic2.jpg'
+           '../../resource/images/game/sildepic2.jpg',
+           '../../resource/images/game/sildepic3.jpg',
+           '../../resource/images/game/sildepic4.jpg'
          ],
         functions: [
             {

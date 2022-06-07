@@ -1,1 +1,38 @@
 /* pages/game/gamePackage/pages/driftingBottle/driftingBottle.wxss */
+.container{
+    width: 100%;
+    padding: 0%;
+}
+
+.bottle_pic{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.select_button{
+    display:flex;
+}
+.button {
+    width: 250rpx;
+    text-align: center;
+    margin: 50rpx 50rpx 50rpx 50rpx;
+    height: 80rpx;
+    color: white;
+    border-radius: 5px;
+    line-height: 80rpx;
+    background-color: #07c160;
+}
+.textarea{
+    width: 95%;
+    height: 400rpx;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    margin: 10rpx 10rpx 10rpx 10rpx;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}

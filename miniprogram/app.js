@@ -5,7 +5,8 @@ App({
   globalData: {
     theme: wx.getSystemInfoSync().theme,
     hasLogin: false,
-    openid: null,
+    openId: "olXiE5VA_MiNunjWqBi_bS4_NQ2Q",
+    env:'cloud1-0g6c5avn84232189',
     iconTabbar: '',
   },
   onLaunch: function(options){

@@ -2,60 +2,75 @@
 Page({
     // 存储请求结果
     data: {
+      /*
       allMissions: [{
-        title: "学习",
-        award: 20,
-        desc: "123",
-        type:"智力值",
-        time:11
+        title: "111",
+        award: 1,
+        desc: "111",
+        complete: false,
+        missionId: 1,
+        openId: getApp().globalData.openId
       },{
-        title: "运动",
-        award: 20,
-        desc: "321",
-        type:"体力值",
-        time:12
+        title: "222",
+        award: 2,
+        desc: "222",
+        complete: false,
+        missionId: 2,
+        openId: getApp().globalData.openId
+      },{
+        title: "333",
+        award: 3,
+        desc: "333",
+        complete: true,
+        missionId: 3,
+        openId: getApp().globalData.openId
+      },{
+        title: "444",
+        award: 4,
+        desc: "444",
+        complete: true,
+        missionId: 4,
+        openId: getApp().globalData.openId
       }], // 用户的所有待办事项
-      incompleteMissions: [{
-        title: "唱歌",
-        award: 20,
-        desc: "123",
-        type:"魅力值",
-        time:1
-      },{
-        title: "学习",
-        award: 20,
-        desc: "321",
-        type:"智力值",
-        time:2
-      }], // 未完成待办事项
-      finishedMissions: [{
-        title: "跑步",
-        award: 20,
-        desc: "123",
-        type:"健康值",
-        time:3
-      },{
-        title: "读书",
-        award: 20,
-        desc: "321",
-        type:"智力值",
-        time:4
-      }], // 已完成待办事项
-      kirbyOpenId : getApp().globalData.kirbyOpenId,
-      deeOpenId : getApp().globalData.deeOpenId,
+      */
+      allMissions: [],
+      incompleteMissions: [], // 未完成待办事项
+      finishedMissions: [], // 已完成待办事项
+      // kirbyOpenId : getApp().globalData.kirbyOpenId,
+      // deeOpenId : getApp().globalData.deeOpenId,
     },
     
     onLoad: function (options) {
-      console.log(111)
+      this.getAllMissions();
+    },
+    getAllMissions(){
       wx.cloud.callFunction({
-        name: 'getOpenId',
-        config:{
-          env:'cloud1-0g6c5avn84232189'
+        name: 'getMissionsById',
+        config: {
+          env: getApp().globalData.env
         },
-        complete: res=>{
-          console.log(res)
+        data:{
+          openId: getApp().globalData.openId
         }
+      }).then((resp) =>{
+        this.setData({
+          allMissions:resp.result.data
+        });
+        this.separateMissions();
       })
+    },
+    separateMissions(){
+      for (var i = 0; i < this.data.allMissions.length; i++){
+        if (this.data.allMissions[i].complete){
+          this.data.finishedMissions.push(this.data.allMissions[i]);
+        } else{
+          this.data.incompleteMissions.push(this.data.allMissions[i]);
+        }
+        this.setData({ // 这里的setData类似于一个触发器，只有这样做了页面中的元素才会改变
+          incompleteMissions: this.data.incompleteMissions,
+          finishedMissions: this.data.finishedMissions
+        })
+      }
     },
     /*
     async onShow() {
@@ -86,7 +101,6 @@ Page({
         }],
       })
     },
-    */
     // 响应左划按钮事件
     async slideButtonTap(e) {
       // 得到触发事件的待办序号
@@ -246,7 +260,7 @@ Page({
         }
       })
     },
-  
+    */
     // 跳转响应函数
     toDetailPage(e) {
       const missionIndex = e.currentTarget.dataset.index
@@ -255,7 +269,7 @@ Page({
         url: '../clockinPackage/showDetails/showDetails?id=' + mission._id,
       })
     },
-  
+    
     toAddPage() {
       wx.navigateTo({
         url: '../clockinPackage/newClockin/newClockin',
