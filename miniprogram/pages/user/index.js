@@ -16,8 +16,10 @@ Page({
       value:{
         "intelligenceValue":212,
         "strengthValue":233,
-        "charmValue":3224,
-        "healthValue":45,
+        "charmValue":324,
+        "healthValue":453,
+        "level":6,
+        "exp":333
       }
     },
 
@@ -93,6 +95,11 @@ Page({
     ranking() {
       wx.navigateTo({
         url: '../userPackage/rankBoard/rankBoard',
+      })
+    },
+    achievements() {
+      wx.navigateTo({
+        url: '../userPackage/achievements/index',
       })
     }
 

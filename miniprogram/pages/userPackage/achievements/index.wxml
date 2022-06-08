@@ -1,0 +1,10 @@
+<!--pages/userPackage/achievements/index.wxml-->
+<scroll-view scroll-y="true" class="container">
+  <view class='function_container'>
+    <view class='function_item' wx:for="{{achievements}}" wx:key="index">
+        <image class='function_img' src='{{item.flag == 1 ? item.pic_url : item.pic_url_nag}}'></image>
+        <view class='function_name'>{{item.name}}</view>
+        <view class='function_details'>{{item.details}}</view>
+    </view>
+  </view>
+</scroll-view>

@@ -28,6 +28,14 @@
   justify-content: center;
   font-weight: 500;
 }
+.tx-lv{
+  margin-top: 12px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  color: #A7C18C
+}
 .tx-end{
   margin-top: 12px;
   font-size: 16px;

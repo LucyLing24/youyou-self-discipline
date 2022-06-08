@@ -20,10 +20,10 @@ function formatTime(date) {
     formatTime: formatTime
   };
   
-  var index = require('../data/data_index.js')
-  var index_next = require('../data/data_index_next.js')
-  var discovery = require('../data/data_discovery.js')
-  var discovery_next = require('../data/data_discovery_next.js')
+  var index = require('../resource/data/data_index.js')
+  var index_next = require('../resource/data/data_index_next.js')
+  var discovery = require('../resource/data/data_discovery.js')
+  var discovery_next = require('../resource/data/data_discovery_next.js')
   
   function getData(url){
     return new Promise(function(resolve, reject){

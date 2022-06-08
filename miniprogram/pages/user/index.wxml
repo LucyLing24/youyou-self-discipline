@@ -10,15 +10,14 @@
   <view class="page-menu">
     <view>
         <image bindtap="cash"class="littleIcon" src="../../resource/images/user/coin.png" ></image>
-        <image bindtap="somehow"class="littleIcon" src="../../resource/images/user/crown.png" ></image>
+        <image bindtap="achievements"class="littleIcon" src="../../resource/images/user/crown.png" ></image>
         <image bindtap="changeLook"class="littleIcon" src="../../resource/images/user/magic-wand.png" ></image>
         <image bindtap="rename"class="littleIcon" src="../../resource/images/user/pen-tool.png" ></image>
         <text class="littleIcon">昵称：{{username}}</text>
     </view> 
-    <view class="tx">智力值：{{value.intelligenceValue}} </view>
-    <view class="tx">体力值：{{value.strengthValue}} </view>
-    <view class="tx">魅力值：{{value.charmValue}} </view>
-    <view class="tx-end">健康值：{{value.healthValue}} </view>
+    <view class="tx-lv">经验值：{{value.exp}} Level：{{value.level}}  </view>
+    <view class="tx">智力值：{{value.intelligenceValue}} || 体力值：{{value.strengthValue}} </view>
+    <view class="tx">魅力值：{{value.charmValue}} || 健康值：{{value.healthValue}} </view>
 
     <view>
       <button class='bt1'  bindtap="stat">
