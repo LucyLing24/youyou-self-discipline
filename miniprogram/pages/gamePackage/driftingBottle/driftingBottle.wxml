@@ -1,6 +1,6 @@
 <!--pages/game/gamePackage/pages/driftingBottle/driftingBottle.wxml-->
 <view class = "container">
-    <image src="../../../resource/images/game/drifting_bottle.jpg" class="bottle_pic"/>
+    <image src="../../../resource/images/game/beach.jpg" class="bottle_pic"/>
     <view class = "select_button"> 
         <view class="button" bindtap="throwBottle">投掷漂流瓶</view>
         <view class="button" bindtap="getBottle">打捞漂流瓶</view>

@@ -16,24 +16,24 @@ Page({
          ],
         functions: [
             {
-              "name": "漂流瓶",
-              "pic_url": '../../resource/images/game/olo.jpg',
-              "page_url":'../gamePackage/driftingBottle/driftingBottle'
-            },
-            {
-              "name": "资源大厅",
-              "pic_url": '../../resource/images/game/book.jpg',
-              "page_url":'../gamePackage/shareResource/shareResource'
-            },
-            {
               "name": "双人五子棋",
-              "pic_url": '../../resource/images/game/friends.jpg',
+              "pic_url": '../../resource/images/game/chess.png',
               "page_url":'../gamePackage/gobang/gobang'
             },
             {
               "name": "2048小游戏",
-              "pic_url": '../../resource/images/game/game.jpg',
+              "pic_url": '../../resource/images/game/board-games.png',
               "page_url":'../gamePackage/2048/2048'
+            },
+            {
+              "name": "资源大厅",
+              "pic_url": '../../resource/images/game/bookshelf.png',
+              "page_url":'../gamePackage/shareResource/shareResource'
+            },
+            {
+              "name": "漂流瓶",
+              "pic_url": '../../resource/images/game/bottle.png',
+              "page_url":'../gamePackage/driftingBottle/driftingBottle'
             }
           ]
     },
