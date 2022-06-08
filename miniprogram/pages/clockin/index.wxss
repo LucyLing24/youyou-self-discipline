@@ -58,7 +58,7 @@
   font-size: 18px;
   position:absolute;
   right: 10%;
-  color:#fdd85c;
+  color:#247028;
 }
 .todo-info_award {
   font-size: 10px;
