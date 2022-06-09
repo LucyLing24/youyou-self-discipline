@@ -5,7 +5,8 @@ Page({
       _id: '',
       todo: {
         title: '',
-        desc:''
+        desc:'',
+        complete: false,
       },
     },
   
@@ -34,7 +35,28 @@ Page({
           todo:{
             title: resp.result.data[0].title,
             desc: resp.result.data[0].desc,
+            complete: resp.result.data[0].complete,
           }
+        })
+      })
+    },
+    finishMission(){
+      wx.cloud.callFunction({
+        name: 'finishMission',
+        config: {
+          env: getApp().globalData.env
+        },
+        data:{
+          _id: this.data._id
+        }
+      }).then((resp) => {
+        console.log(resp);
+        wx.showToast({
+          title: '任务已完成',
+        })
+      }).then((resp) => {
+        wx.switchTab({
+          url: '../../clockin/index',
         })
       })
     }

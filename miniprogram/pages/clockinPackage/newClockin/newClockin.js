@@ -6,8 +6,10 @@ Page({
     data: {
       title: '',
       desc: '',
-      freq: 0,
-      award: 0
+      kind: '智力',
+      time: 0,
+      award: 0,
+      intelChecked: true, // 智力选项的被选中情况
     },
   
     // 表单输入处理函数
@@ -26,9 +28,20 @@ Page({
         award: e.detail.value
       })
     },
-  
+    onTimeInput(e) {
+      this.setData({
+        time: e.detail.value
+      })
+    },
+    handleChange(e){
+      console.log(e);
+      this.setData({
+        kind: e.detail.value
+      });
+    },
     // 保存待办
     async saveMission() {
+      console.log("start saving mission.")
       // 对输入框内容进行校验
       if (this.data.title === '') {
         wx.showToast({
@@ -71,7 +84,9 @@ Page({
           openId: getApp().globalData.openId,
           title: this.data.title,
           desc: this.data.desc,
-          award: this.data.award
+          kind: this.data.kind,
+          award: this.data.award,
+          time: this.data.time
         }
       }).then((resp) => {
         wx.showToast({
@@ -82,11 +97,16 @@ Page({
   
     // 重置所有表单项
     resetMission() {
+      console.log("reset mission.")
       this.setData({
         title: '',
         desc: '',
-        freq: 0,
+        kind: '智力',
+        time: 0,
         award: 0
+      })
+      this.setData({
+        intelChecked: true,
       })
     }
   })

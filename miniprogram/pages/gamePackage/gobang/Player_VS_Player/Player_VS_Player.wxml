@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="bg">
+  <view class="container_1">
+    <view class="chessBoard">
+        <view class="block" wx:for="{{chessBoard}}" wx:key="{{index}}" bindtap="step" data-pos="{{index}}">
+        <view class="{{item}}"></view>
+      </view>
+    </view>
+  </view>
+    <button bindtap="restart" type="warning" class="restart-but">重新开始</button>
+    <button bindtap="regretChess" type="warning" class="restart-but">悔棋</button>
+    <button bindtap="getBackToMenu" type="warning" class="restart-but">返回</button>
+</view>
+
+

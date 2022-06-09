@@ -1,1 +1,51 @@
-/* pages/game/gamePackage/pages/gobang/gobang.wxss */
+/* pages/MainPage/MainPage.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background: url("https://i.postimg.cc/xdQXzksp/OIP-C.jpg");
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  vertical-align: middle;
+  margin: 0px;
+} 
+.background{
+  background-color: coral;
+}
+.button-top{
+  width: 200px!important;
+  margin-top: 280px;
+  font-size: 20px;
+  background-color: #A7C18C;
+  color: white;
+  box-shadow: gray 5px 5px 10px;
+}
+.button-in{
+  width: 200px!important;
+  margin-top: 50px;
+  font-size: 20px;
+  background-color: #fdd85c;
+  color: white;
+  box-shadow: gray 5px 5px 10px;
+}
+.tx{
+  margin-top: 30px;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  color: darkgoldenrod;
+}
+.button-b{
+  width: 200px!important;
+  margin-top: 50px;
+  font-size: 20px;
+  background-color: rgb(255, 154, 60);
+  color: white;
+  box-shadow: gray 5px 5px 10px;
+}

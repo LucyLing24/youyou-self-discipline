@@ -9,7 +9,7 @@
     </view>
     <view class="form-cell">
       <view class="form-cell_title">任务用时</view>
-      <input class="form-cell_input" placeholder=" (单位为小时)" placeholder-class="form-cell_title-placeholder" bindinput="onAwardInput" type="number" value="{{time}}" />
+      <input class="form-cell_input" placeholder=" (单位为小时)" placeholder-class="form-cell_title-placeholder" bindinput="onTimeInput" type="number" value="{{time}}" />
     </view>
   </view>
 
@@ -18,10 +18,10 @@
     <view class="form-cell"> 
       <view>选择属性</view>
       <radio-group bindchange="handleChange">
-        <radio value="intelligenceValue" checked="true">智力</radio>
-        <radio value="strengthValue">体力</radio>
-        <radio value="charmValue">魅力</radio>
-        <radio value="healthValue">健康</radio>
+        <radio value="智力" checked="{{intelChecked}}">智力</radio>
+        <radio value="体力">体力</radio>
+        <radio value="魅力">魅力</radio>
+        <radio value="健康">健康</radio>
       </radio-group>
     </view>
    
@@ -38,7 +38,7 @@
     </view></view>
 
   <view class="footer">
-    <view class="reset" bindtap="resetMission">重置</view>
-    <view class="save" bindtap="saveMission">保存</view>
+    <view  bindtap="resetMission">重置</view>
+    <view  bindtap="saveMission">保存</view>
   </view>
 </view>
