@@ -35,31 +35,6 @@
             ]
         }
     ],
-    "window": {
-        "backgroundTextStyle": "dark",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "悠游自律",
-        "navigationBarTextStyle": "black"
-    },
-    {
-      "root": "pages/gamePackage",
-      "pages": [
-        "2048/2048",
-        "driftingBottle/driftingBottle",
-        "gobang/gobang",
-        "shareResource/shareResource"
-      ]
-    },
-    {
-      "root": "pages/userPackage",
-      "pages": [
-        "rankBoard/rankBoard",
-        "setup/setup",
-        "statisticsBoard/statisticsBoard",
-        "achievements/index"
-      ]
-    }
-  ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
