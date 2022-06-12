@@ -52,7 +52,7 @@
   <view class="form-group" wx:if="{{finishedMissions.length > 0}}">
     <view class="form-cell" wx:for="{{finishedMissions}}" wx:key="index">
       <mp-slideview buttons="{{slideButtons}}" data-index='{{index}}' bindbuttontap="slideButtonTapBottom">
-        <view class="slide" data-index="{{index}}"  bindtap="toDetailPage">
+        <view class="slide" data-index="{{index}}"  bindtap="toFinishedDetailPage">
           <image class="checkbox" data-index='{{index}}' src="../../resource/images/clockin/dry-clean.png" catchtap="incompleteTodo" />
           <view class="todo-info">
             <view class="todo-info_title">

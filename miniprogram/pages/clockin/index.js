@@ -40,10 +40,15 @@ Page({
       // deeOpenId : getApp().globalData.deeOpenId,
     },
     
-    onLoad: function (options) {
-      this.getAllMissions();
+    onLoad: async function (options) {
+      // this.getAllMissions();
     },
     getAllMissions(){
+      this.setData({
+        allMissions: [],
+        incompleteMissions: [], // 未完成待办事项
+        finishedMissions: [], // 已完成待办事项
+      });
       wx.cloud.callFunction({
         name: 'getMissionsById',
         config: {
@@ -74,6 +79,10 @@ Page({
           finishedMissions: this.data.finishedMissions
         })
       }
+    },
+    onShow: async function(options){
+      this.getAllMissions();
+      // this.onLoad();
     },
     /*
     async onShow() {
@@ -272,7 +281,13 @@ Page({
         url: '../clockinPackage/showDetails/showDetails?id=' + mission._id,
       })
     },
-    
+    toFinishedDetailPage(e) {
+      const missionIndex = e.currentTarget.dataset.index
+      const mission = this.data.finishedMissions[missionIndex]
+      wx.navigateTo({
+        url: '../clockinPackage/showDetails/showDetails?id=' + mission._id,
+      })
+    },
     toAddPage() {
       wx.navigateTo({
         url: '../clockinPackage/newClockin/newClockin',

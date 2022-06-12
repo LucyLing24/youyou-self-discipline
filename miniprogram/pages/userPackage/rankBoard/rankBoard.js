@@ -14,7 +14,7 @@ Page({
         charmValue:3,
         healthValue:4
       },
-      { 
+      {  
         id:2,
         avatarUrl:"/resource/images/game/images/icon8.jpg",
         username:"Lily",
@@ -89,7 +89,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.hotListSort();
+    this.getUserList();
+  },
+  getUserList(){
+    wx.cloud.callFunction({
+      name: 'getUserList',
+      config: {
+          env: getApp().globalData.env
+      }
+    }).then((resp) => {
+      // console.log(resp);
+      var userList = resp.result.data;
+      userList = this.sortByKey(userList, "alltime");
+      console.log(userList);
+      this.setData({
+        userList: userList
+      })
+    })
+  },
+  sortByKey(array, key) {
+    return array.sort(function(a, b) {
+        var x = a[key]; var y = b[key];
+        return ((x < y) ? 1 : ((x > y) ? -1 : 0));
+    });
   },
     /**
      * 生命周期函数--监听页面初次渲染完成

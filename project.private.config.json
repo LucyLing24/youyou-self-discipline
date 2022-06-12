@@ -51,6 +51,20 @@
                     "name": "任务详情",
                     "pathName": "pages/clockinPackage/showDetails/showDetails",
                     "query": "id=16db756f62a0911e06598e1332482756",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "个人",
+                    "pathName": "pages/user/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "statistics",
+                    "pathName": "pages/userPackage/statisticsBoard/statisticsBoard",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }
