@@ -6,7 +6,7 @@
 
 <view class="users-list">
   <view class="users" wx:for="{{userList}}" wx:key="index">
-    <image src="{{item.avatarUrl}}"></image>
+    <image src="/resource/images/user/cat.jpg"></image>
     <view class="users-right">
       <view class="users-title">
         <view>{{item.username}}</view>

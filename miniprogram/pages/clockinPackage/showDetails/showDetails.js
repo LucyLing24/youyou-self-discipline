@@ -7,6 +7,9 @@ Page({
         title: '',
         desc:'',
         complete: false,
+        kind:'',
+        change:'',
+        openId:'',
       },
     },
   
@@ -36,6 +39,9 @@ Page({
             title: resp.result.data[0].title,
             desc: resp.result.data[0].desc,
             complete: resp.result.data[0].complete,
+            kind: resp.result.data[0].kind,
+            change: resp.result.data[0].award,
+            openId: resp.result.data[0].openId
           }
         })
       })
@@ -51,14 +57,29 @@ Page({
         }
       }).then((resp) => {
         console.log(resp);
-        wx.showToast({
-          title: '任务已完成',
+      }).then((resp) => {
+        wx.cloud.callFunction({
+          name: 'updUserInfo',
+          config: {
+            env: getApp().globalData.env
+          },
+          data:{
+            openId: this.data.todo.openId,
+            kind: this.data.todo.kind,
+            change: this.data.todo.change,
+          }
         })
       }).then((resp) => {
-        wx.switchTab({
-          url: '../../clockin/index',
-        })
+        this.sleep(2000);
+        wx.showToast({
+          icon: "none",
+          title: this.data.todo.kind + '增加' + this.data.todo.change + '点，经验值增加5点',
+          duration: 6000
+        });
       })
+    },
+    sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
     }
     /*
     // 根据 _id 值查询并显示待办数据

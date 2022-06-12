@@ -91,10 +91,16 @@ Page({
       }).then((resp) => {
         wx.showToast({
           title: '添加成功',
+        }).then(this.sleep(5000)).then((resp) => {
+          wx.switchTab({
+            url: '../../clockin/index',
+          })
         })
       })
     },
-  
+    sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    },
     // 重置所有表单项
     resetMission() {
       console.log("reset mission.")

@@ -30,7 +30,8 @@
             "pages": [
                 "rankBoard/rankBoard",
                 "setup/setup",
-                "statisticsBoard/statisticsBoard"
+                "statisticsBoard/statisticsBoard",
+                "achievements/index"
             ]
         }
     ],

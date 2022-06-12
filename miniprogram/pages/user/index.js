@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-      username:"瓏酱007",
+      username:"",
       person:[
         "../../resource/images/user/person1.gif",
         "../../resource/images/user/person2.gif",
@@ -14,22 +14,63 @@ Page({
         "../../resource/images/user/person5.gif"
       ],
       value:{
-        "intelligenceValue":212,
-        "strengthValue":233,
-        "charmValue":324,
-        "healthValue":453,
-        "level":6,
-        "exp":333
-      }
+        "intelligenceValue":0,
+        "strengthValue":0,
+        "charmValue":0,
+        "healthValue":0,
+        "level":0,
+        "exp":0
+      },
+      level: 0
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      this.loadUserData();
     },
-
+    loadUserData(){
+      wx.cloud.callFunction({
+        name: 'getUserInfo',
+        config: {
+          env: getApp().globalData.env
+        },
+        data:{
+          openId: getApp().globalData.openId
+        }
+      }).then((resp) => {
+        // console.log(resp);
+        const userData = resp.result.data[0];
+        this.setData({
+          username: userData.username,
+          value:{
+            "intelligenceValue":userData.intelligence,
+            "strengthValue":userData.strength,
+            "charmValue":userData.charm,
+            "healthValue":userData.health,
+            "level":userData.level,
+            "exp":userData.exp
+          }
+        })
+      }).then((resp) =>{
+        this.refreshLevel();
+      })
+    },
+    refreshLevel(){
+      var level = 0;
+      var cur_exp = this.data.value.exp;
+      var cur_interval = 10;
+      while(cur_exp >= 0){
+        cur_exp -= cur_interval;
+        level += 1;
+        cur_interval += 5;
+      }
+      this.setData({
+        level: level
+      })
+      console.log(cur_exp);
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -99,7 +140,7 @@ Page({
     },
     achievements() {
       wx.navigateTo({
-        url: '../userPackage/achievements/index',
+        url: '../../pages/userPackage/achievements/index',
       })
     }
 
