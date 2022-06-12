@@ -1,4 +1,32 @@
-/* pages/game/gamePackage/pages/shareResource/shareResource.wxss */
+/* pages/gamePackage/shareResource/shareResource.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /*padding: 200rpx 0;*/
+  box-sizing: border-box;
+  background: #F0F4F3;
+}
+
+.container.withtab{
+  margin: 105rpx 0 0 0;
+  /*top: 105rpx;*/
+}
+.flex-wrp{
+  display: flex;
+}
+.flex-tab{
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.flex-item{
+  flex-grow: 1;
+  text-align: center;
+}
+
 
 .container{
   height: 1500rpx;
@@ -6,14 +34,14 @@
 .container .search{
   width: 735rpx;
   height: 65rpx;
-  padding: 12rpx 0 12rpx 15rpx;
-  background: #90a57a;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background:#87a16a;
 }
 .container .search-left{
-  flex: 0;
+  flex: 8;
   background: #A7C18C;
-  border-radius: 50rpx;
   text-align: left;
+  border-radius: 20rpx;
 }
 .container .search-left input{
   display: inline-block;
@@ -21,7 +49,7 @@
   font-size: 26rpx;
 }
 .search-placeholder{
-  color: #e5f1d7;
+  color: #d0e0be;
   line-height: 20rpx;
 }
 .container .search .search-left image{
@@ -39,9 +67,88 @@
   padding: 10rpx;
 }
 
-.container{
-  padding: 0;
-  font-size: 14rpx;
-  background: #F0F4F3;
-  color: #000;
+
+.form-cell_title {
+  margin-bottom: 10px;
+  font-size: medium;
+}
+
+.form-cell_desc {
+  font-size: small;
+  color: lightgray;
+}
+
+.footer {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  border-top: #A7C18C;
+}
+
+.footer view {
+  width: 50%;
+  height: 100%;
+  padding-top: 2vh;
+  text-align: center;
+}
+
+.list {
+  background: white;
+}
+
+.edit {
+  color: white;
+  background: #A7C18C;
+}
+
+.users-list {
+  background: white;
+  padding: 0 30rpx;
+}
+
+.users {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx;
+  border-bottom: 1px solid #efefef;
+}
+ 
+.users image {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 3em;
+}
+ 
+.users-right {
+  width: 70%;
+  margin-left: 10rpx;
+  padding: 10rpx 0; 
+}
+ 
+.users-right .users-title {
+  font-size: 30rpx;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+}
+ 
+.users-right .users-title view:nth-child(2) {
+  color: gray;
+  font-style: oblique;
+}
+ 
+.users-introduce {
+  margin-top: 20rpx;
+  font-size: 25rpx;
+  color: gray;
+  letter-spacing: 5rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }

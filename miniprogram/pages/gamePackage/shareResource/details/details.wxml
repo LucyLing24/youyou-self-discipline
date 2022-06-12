@@ -1,0 +1,30 @@
+<!--pages/gamePackage/shareResource/details/details.wxml-->
+<view class="container">
+  <view class="form-group">
+    <view class="form-cell">
+      <image class="img" src="{{post.img}}"></image>
+      <view class="form-cell_big_title">{{post.username}}</view>
+      <view class="form-cell_desc">{{post.content}}</view>
+    </view>
+  </view>
+
+  <view class="form-group">
+    <view class="form-cell">
+      <input placeholder="请在这里评论" placeholder-class="search-placeholder"/>
+      <view class="form-cell_title">{{item.comment_user}}</view>
+  </view>
+  </view>
+
+  <view class="form-group">
+  
+    <view class="form-cell">
+      <view class="form-cell_big_title">评论</view></view>
+      <view class="users" wx:for="{{post.comments}}" wx:key="index">
+      <view class="form-cell">
+      <view class="form-cell_title">{{item.comment_user}}</view>
+      <view class="form-cell_desc">{{item.comment_content}}</view>
+    </view>
+  </view>
+</view>
+</view>
+

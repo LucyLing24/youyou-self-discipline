@@ -25,7 +25,6 @@
 
 <view class="border"></view>
 <view class="content"   bindtap="info">  
-fdsg
 </view>
 
 <button bindtap="back" hover-class="btn-color">退出账号</button>

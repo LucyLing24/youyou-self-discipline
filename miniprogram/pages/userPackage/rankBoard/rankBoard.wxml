@@ -1,21 +1,19 @@
 <!--pages/user/userPackage/pages/rankBoard/rankBoard.wxml-->
 <view class="container">
   <view class="form-group">
-    <view class="form-cell">
-  
-
-<view class="users-list">
-  <view class="users" wx:for="{{userList}}" wx:key="index">
-    <image src="{{item.avatarUrl}}"></image>
-    <view class="users-right">
-      <view class="users-title">
-        <view>{{item.username}}</view>
-        <view>{{index + 1}}</view>
+      <view class="form-cell">
+          <view class="users-list">
+            <view class="users" wx:for="{{userList}}" wx:key="index">
+              <image src="{{item.avatarUrl}}"></image>
+              <view class="users-right">
+                <view class="users-title">
+                  <view>{{item.username}}</view>
+                  <view>{{index + 1}}</view>
+                </view>
+                <view class="users-introduce">共打卡：{{item.alltime}}小时</view>
+              </view>
+            </view>
+          </view>
       </view>
-      <view class="users-introduce">共打卡：{{item.alltime}}小时</view>
-    </view>
   </view>
-</view>
-</view>
-</view>
 </view>

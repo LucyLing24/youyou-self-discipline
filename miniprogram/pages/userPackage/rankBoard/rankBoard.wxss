@@ -56,8 +56,9 @@
 }
  
 .users image {
-  width: 200rpx;
-  height: 250rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 3em;
 }
  
 .users-right {

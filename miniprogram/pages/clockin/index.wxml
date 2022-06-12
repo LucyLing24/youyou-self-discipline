@@ -1,6 +1,6 @@
 <!--pages/clockin/index.wxml-->
 
-<wxs module="util" src="../util.wxs" />
+<wxs module="util" src="../../resource/lib/util.wxs" />
 
 <view class="container empty" wx:if="{{allMissions.length === 0}}">
   <image class="background" src="../../resource/images/clockin/thinking.png" mode="aspectFit" />

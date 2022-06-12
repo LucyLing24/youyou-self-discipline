@@ -6,8 +6,8 @@ Page({
     userList: [
       { 
         id:1,
-        avatarUrl:"/resource/images/user/cat.jpg",
-        username:"aaa",
+        avatarUrl:"/resource/images/game/images/icon9.jpeg",
+        username:"Maverick",
         alltime:100,
         intelligenceValue:1,
         strengthValue:2,
@@ -16,8 +16,8 @@ Page({
       },
       { 
         id:2,
-        avatarUrl:"/resource/images/user/cat.jpg",
-        username:"aaa",
+        avatarUrl:"/resource/images/game/images/icon8.jpg",
+        username:"Lily",
         alltime:100,
         intelligenceValue:1,
         strengthValue:2,
@@ -26,8 +26,8 @@ Page({
       },
       { 
         id:3,
-        avatarUrl:"/resource/images/user/cat.jpg",
-        username:"aaa",
+        avatarUrl:"/resource/images/game/images/icon1.jpeg",
+        username:"Rebecca",
         alltime:100,
         intelligenceValue:1,
         strengthValue:2,
@@ -36,8 +36,8 @@ Page({
       },
       { 
         id:4,
-        avatarUrl:"/resource/images/user/cat.jpg",
-        username:"aaa",
+        avatarUrl:"/resource/images/user/kitty.jpg",
+        username:"瓏宝",
         alltime:100,
         intelligenceValue:1,
         strengthValue:2,
@@ -46,7 +46,7 @@ Page({
       },
     ],
   },
-  // 根据小说人气进行从大到小排序
+  // 根据人气进行从大到小排序
   hotListSort: function() {
     var arr_length = this.data.userList.length;
     // 按人气排序获取数据数组的长度
