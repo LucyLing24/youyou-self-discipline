@@ -4,7 +4,7 @@
       <view class="form-cell">
           <view class="users-list">
             <view class="users" wx:for="{{userList}}" wx:key="index">
-              <image src="{{item.avatarUrl}}"></image>
+              <image src="{{item.imgUrl}}"></image>
               <view class="users-right">
                 <view class="users-title">
                   <view>{{item.username}}</view>

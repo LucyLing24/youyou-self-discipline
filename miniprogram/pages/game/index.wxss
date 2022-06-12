@@ -29,7 +29,7 @@
   padding-top:15px;
 }
 .function_img{
-  border-radius: 40rpx;
+  border-radius: 35rpx;
   width:150px;
   height:150px;
   background-color: white;

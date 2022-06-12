@@ -39,7 +39,7 @@
 .checkbox {
   width: 24px;
   height: 24px;
-  border-radius: 12px;
+  border-radius: 15px;
   align-self: flex-start;
   transform: translateY(5px);
 }
@@ -90,12 +90,14 @@
   margin: 10%;
   background-color: #A7C18C;
   color: white;
+  border-radius: 15rpx;
 }
 
 .btn-small{
   margin: 5%;
   background-color: #A7C18C;
   color: white;
+  border-radius: 15rpx;
 }
 
 .btn-hover{

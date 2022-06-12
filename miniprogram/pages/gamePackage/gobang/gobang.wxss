@@ -5,10 +5,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
+  padding: 150rpx 0;
   box-sizing: border-box;
   background-repeat: no-repeat;
-  background: url("https://i.postimg.cc/xdQXzksp/OIP-C.jpg");
+  background: url("https://i.postimg.cc/bN95bqbS/bg2.jpg");
   background-size:100% 100%;
   -moz-background-size:100% 100%;
   vertical-align: middle;
@@ -19,33 +19,33 @@
 }
 .button-top{
   width: 200px!important;
-  margin-top: 280px;
+  margin-top: 200px;
   font-size: 20px;
   background-color: #A7C18C;
   color: white;
-  box-shadow: gray 5px 5px 10px;
+  border-radius: 15rpx;
 }
 .button-in{
   width: 200px!important;
-  margin-top: 50px;
+  margin-top: 25px;
   font-size: 20px;
   background-color: #fdd85c;
   color: white;
-  box-shadow: gray 5px 5px 10px;
+  border-radius: 15rpx;
 }
 .tx{
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 60px;
   display: flex;
   justify-content: center;
   font-weight: 500;
-  color: darkgoldenrod;
+  color:rgb(235, 250, 246);
 }
 .button-b{
   width: 200px!important;
-  margin-top: 50px;
+  margin-top: 25px;
   font-size: 20px;
   background-color: rgb(255, 154, 60);
   color: white;
-  box-shadow: gray 5px 5px 10px;
+  border-radius: 15rpx;
 }

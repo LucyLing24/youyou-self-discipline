@@ -2,7 +2,7 @@
 
 <view class="page-wrap">
   <view class="page-bg">
-    <image class="page-bg" src="../../resource/images/user/person3.gif" mode="aspectFill"></image>
+    <image class="page-bg" src="../../resource/images/user/person2.gif" mode="aspectFill"></image>
   </view>
    <view class="head-wrap">
   </view>
@@ -16,8 +16,11 @@
         <text class="littleIcon">昵称：{{username}}</text>
     </view> 
     <view class="tx-lv">经验值：{{value.exp}} Level：{{level}}  </view>
-    <view class="tx">智力值：{{value.intelligenceValue}} || 体力值：{{value.strengthValue}} </view>
-    <view class="tx">魅力值：{{value.charmValue}} || 健康值：{{value.healthValue}} </view>
+    <view class="tx">智力值：{{value.intelligenceValue}}</view>
+    <view class="tx">体力值：{{value.strengthValue}} </view>
+    <view class="tx">魅力值：{{value.charmValue}}</view>
+    <view class="tx">健康值：{{value.healthValue}} </view>
+
 
     <view>
       <button class='bt1'  bindtap="stat">
