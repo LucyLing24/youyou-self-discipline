@@ -41,32 +41,57 @@
         "navigationBarTitleText": "悠游自律",
         "navigationBarTextStyle": "black"
     },
-    "tabBar": {
-        "color": "red",
-        "selectedColor": "yellow",
-        "borderStyle": "white",
-        "backgroundColor": "white",
-        "list": [
-            {
-                "pagePath": "pages/clockin/index",
-                "iconPath": "./resource/images/clockin/clipboard-nag.png",
-                "selectedIconPath": "./resource/images/clockin/clipboard.png",
-                "text": "打卡"
-            },
-            {
-                "pagePath": "pages/game/index",
-                "iconPath": "./resource/images/game/board-game-nag.png",
-                "selectedIconPath": "./resource/images/game/board-game.png",
-                "text": "游戏"
-            },
-            {
-                "pagePath": "pages/user/index",
-                "iconPath": "./resource/images/user/account-nag.png",
-                "selectedIconPath": "./resource/images/user/account.png",
-                "text": "个人"
-            }
-        ]
+    {
+      "root": "pages/gamePackage",
+      "pages": [
+        "2048/2048",
+        "driftingBottle/driftingBottle",
+        "gobang/gobang",
+        "shareResource/shareResource"
+      ]
     },
-    "style": "v2",
-    "sitemapLocation": "sitemap.json"
+    {
+      "root": "pages/userPackage",
+      "pages": [
+        "rankBoard/rankBoard",
+        "setup/setup",
+        "statisticsBoard/statisticsBoard",
+        "achievements/index"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "悠游自律",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "red",
+    "selectedColor": "yellow",
+    "borderStyle": "white",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/clockin/index",
+        "iconPath": "./resource/images/clockin/clipboard-nag.png",
+        "selectedIconPath": "./resource/images/clockin/clipboard.png",
+        "text": "打卡"
+      },
+      {
+        "pagePath": "pages/game/index",
+        "iconPath": "./resource/images/game/board-game-nag.png",
+        "selectedIconPath": "./resource/images/game/board-game.png",
+        "text": "游戏"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "./resource/images/user/account-nag.png",
+        "selectedIconPath": "./resource/images/user/account.png",
+        "text": "个人"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
 }
