@@ -30,6 +30,27 @@
                     "name": "2048",
                     "pathName": "pages/gamePackage/2048/2048",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "统计",
+                    "pathName": "pages/userPackage/statisticsBoard/statisticsBoard",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "添加新任务",
+                    "pathName": "pages/clockinPackage/newClockin/newClockin",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "任务详情",
+                    "pathName": "pages/clockinPackage/showDetails/showDetails",
+                    "query": "id=16db756f62a0911e06598e1332482756",
                     "scene": null,
                     "launchMode": "default"
                 }

@@ -1,2 +1,8 @@
-<!--pages/game/gamePackage/pages/gobang/gobang.wxml-->
-<text>pages/game/gamePackage/pages/gobang/gobang.wxml</text>
+<!--pages/MainPage/MainPage.wxml-->
+<!-- <text>pages/MainPage/MainPage.wxml</text> -->
+<view class="container">
+  <view class="tx">悠游五子棋</view>
+  <button bindtap="player_ai" type="warning" class="button-top">人机对决</button>
+  <button bindtap="player_player" type="warning" class="button-in">双人游戏</button>
+  <button bindtap="getBack" type="warning" class="button-b">返回</button>
+</view>

@@ -1,17 +1,44 @@
 {
-  "pages": [
-    "pages/clockin/index",
-    "pages/welcome/index",
-    "pages/game/index",
-    "pages/user/index"
-  ],
-  "subPackages": [
-    {
-      "root": "pages/clockinPackage",
-      "pages": [
-        "newClockin/newClockin",
-        "showDetails/showDetails"
-      ]
+    "pages": [
+      
+        "pages/clockin/index",
+        "pages/welcome/index",
+        "pages/game/index",
+        "pages/user/index"
+    ],
+    "subPackages": [
+        {
+            "root": "pages/clockinPackage",
+            "pages": [
+                "newClockin/newClockin",
+                "showDetails/showDetails"
+            ]
+        },
+        {
+            "root": "pages/gamePackage",
+            "pages": [
+                "2048/2048",
+                "driftingBottle/driftingBottle",
+                "gobang/gobang",
+                "gobang/Player_VS_AI/Player_VS_AI",
+                "gobang/Player_VS_Player/Player_VS_Player",
+                "shareResource/shareResource"
+            ]
+        },
+        {
+            "root": "pages/userPackage",
+            "pages": [
+                "rankBoard/rankBoard",
+                "setup/setup",
+                "statisticsBoard/statisticsBoard"
+            ]
+        }
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "悠游自律",
+        "navigationBarTextStyle": "black"
     },
     {
       "root": "pages/gamePackage",

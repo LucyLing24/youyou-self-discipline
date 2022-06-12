@@ -59,6 +59,9 @@ Page({
         this.separateMissions();
       })
     },
+    missionFinished(e){
+      console.log(e);
+    },
     separateMissions(){
       for (var i = 0; i < this.data.allMissions.length; i++){
         if (this.data.allMissions[i].complete){

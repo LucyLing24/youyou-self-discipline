@@ -33,3 +33,15 @@
     color: white;
     background: #A7C18C;
   }
+
+  .button {
+    width: 250rpx;
+    text-align: center;
+    margin: 50rpx 50rpx 50rpx 50rpx;
+    height: 80rpx;
+    color: white;
+    border-radius: 5px;
+    line-height: 80rpx;
+    font-weight: bold;
+    background-color: #A7C18C;
+}

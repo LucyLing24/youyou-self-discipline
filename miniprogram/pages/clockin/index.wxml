@@ -2,7 +2,7 @@
 
 <wxs module="util" src="../util.wxs" />
 
-<view class="container empty"  wx:if="{{allMissions.length === 0}}">
+<view class="container empty" wx:if="{{allMissions.length === 0}}">
   <image class="background" src="../../resource/images/clockin/thinking.png" mode="aspectFit" />
   <view class="title">暂无打卡 </view>
   <view class="subtitle">请添加第一个打卡任务吧！</view>
@@ -18,11 +18,11 @@
     未完成的任务
     <mp-badge content="{{incompleteMissions.length}}" style="margin-left: 5px;" />
   </view>
-  <view class="form-group"wx:if="{{incompleteMissions.length > 0}}">
+  <view class="form-group" wx:if="{{incompleteMissions.length > 0}}">
     <view class="form-cell" wx:for="{{incompleteMissions}}" wx:key="index">
       <mp-slideview buttons="{{slideButtons}}" data-index='{{index}}' bindbuttontap="slideButtonTap">
         <view class="slide" data-index="{{index}}" bindtap="toDetailPage">
-          <image class="checkbox" data-index='{{index}}' src="../../resource/images/clockin/dry-clean.png" catchtap="finishTodo" />
+          <image class="checkbox" data-index='{{index}}' src="../../resource/images/clockin/dry-clean.png" bindtap="missionFinished"/>
           <view class="todo-info">
             <view class="todo-info_title">
               {{util.filterStr(item.title, 10)}} 
@@ -31,7 +31,7 @@
                   {{item.time}} 小时
               </view>
                 <view class="todo-info_award">
-                  {{item.award}} {{item.type}} 
+                  {{item.award}} {{item.kind}} 
               </view>
             <view class="todo-info_desc">{{util.filterStr(item.desc, 10)}}</view>
           </view>
@@ -62,7 +62,7 @@
                   {{item.time}} 小时
               </view>
             <view class="todo-info_award">
-              {{item.award}} {{item.type}} 
+              {{item.award}} {{item.kind}} 
             </view>
             <view class="todo-info_desc">{{util.filterStr(item.desc, 10)}}</view>
           </view>
