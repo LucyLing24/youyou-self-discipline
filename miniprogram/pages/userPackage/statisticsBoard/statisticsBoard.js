@@ -64,6 +64,16 @@ function initChart2(canvas, width, height, dpr) {
   canvas.setChart(chart);
 
   var option = {
+    title: {
+        text: '总览',
+        x: 'left',
+        y: 'top',
+        textStyle: {
+          color: '#A7C18C',
+          fontStyle: 'normal',
+          fontSize: 24
+        },
+      },
     tooltip: {
       trigger: 'axis',
       axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -72,7 +82,8 @@ function initChart2(canvas, width, height, dpr) {
       confine: true
     },
     legend: {
-      data: ['热度', '正面', '负面']
+      data: ['热度', '正面', '负面'],
+      x: 'right'
     },
     grid: {
       left: 20,
@@ -177,8 +188,9 @@ function initChart3(canvas, width, height, dpr) {
 
   var option = {
     title: {
-      text: '每日统计',
-      left: 'center',
+      text: '走势分析',
+      x: 'left',
+      y: 'top',
       textStyle: {
         color: '#A7C18C',
         fontStyle: 'normal',
@@ -186,7 +198,8 @@ function initChart3(canvas, width, height, dpr) {
       },
     },
     legend: {
-      data: ['A', 'B', 'C'],
+      data: ['学习', '运动', '游戏'],
+      x:'right',
     },
     grid: {
       containLabel: true
@@ -212,17 +225,17 @@ function initChart3(canvas, width, height, dpr) {
       // show: false
     },
     series: [{
-      name: 'A',
+      name: '学习',
       type: 'line',
       smooth: true,
       data: [18, 36, 65, 30, 78, 40, 33]
     }, {
-      name: 'B',
+      name: '运动',
       type: 'line',
       smooth: true,
       data: [12, 50, 51, 35, 70, 30, 20]
     }, {
-      name: 'C',
+      name: '游戏',
       type: 'line',
       smooth: true,
       data: [10, 30, 31, 50, 40, 20, 10]
