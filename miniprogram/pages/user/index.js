@@ -21,14 +21,28 @@ Page({
         "level":0,
         "exp":0
       },
-      level: 0
+      level: 0,
+      look_index: 0,
+      look_src: ''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-      this.loadUserData();
+      this.changeLook();
+    },
+    changeLook(){
+      var cur_src = this.data.person[(this.data.look_index + 1) % this.data.person.length];
+      this.setData({
+        look_index: this.data.look_index + 1,
+        look_src: cur_src
+      })
+    },
+    rename(){
+      wx.navigateTo({
+        url: '../userPackage/rename/index',
+      })
     },
     loadUserData(){
       wx.cloud.callFunction({
@@ -82,7 +96,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      this.loadUserData();
     },
 
     /**

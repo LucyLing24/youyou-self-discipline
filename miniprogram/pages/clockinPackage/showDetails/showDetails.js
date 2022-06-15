@@ -64,6 +64,7 @@ Page({
             env: getApp().globalData.env
           },
           data:{
+            updType: 'updProperty',
             openId: this.data.todo.openId,
             kind: this.data.todo.kind,
             change: this.data.todo.change,

@@ -1,0 +1,10 @@
+<!--pages/userPackage/rename/index.wxml-->
+<view class="container">
+    <text class="first_text">当前用户的昵称为：   {{old_username}}</text>
+
+    <view class="input_box">
+        <text class="second_text">要修改的昵称为：</text>
+        <input class="input" bindinput="input_func"></input>
+    </view>
+    <text class="button" bindtap="rename_button_tap">修改昵称</text>
+</view>

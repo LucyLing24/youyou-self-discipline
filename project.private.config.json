@@ -65,6 +65,13 @@
                     "name": "statistics",
                     "pathName": "pages/userPackage/statisticsBoard/statisticsBoard",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "rename",
+                    "pathName": "pages/userPackage/rename/index",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }

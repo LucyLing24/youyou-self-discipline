@@ -9,12 +9,13 @@ const db = cloud.database()
 const Users = db.collection("Users")
 // 云函数入口函数
 exports.main = async (event, context) => {
+    if (event.updType == 'updProperty'){
     console.log(event.openId);
     var intelligenceChange = (event.kind == "智力")? parseInt(event.change) : 0;
     var strengthChange = (event.kind == "体力")? parseInt(event.change): 0;
     var charmChange = (event.kind == "魅力")? parseInt(event.change) : 0;
     var healthChange = (event.kind == "健康")? parseInt(event.change) : 0;
-    console.log(await Users.where({
+    return await Users.where({
         openId: event.openId
     }).update({
         data:{
@@ -28,5 +29,14 @@ exports.main = async (event, context) => {
         console.log(resp);
     }).then((resp) => {
         console.log(Users.where({openId: event.openId}).get());
-    }))
+    })
+    }else if(event.updType == 'updName'){
+        return await Users.where({
+            openId: event.openId
+        }).update({
+            data:{
+                username: event.username
+            }
+        })
+    }
 }

@@ -2,7 +2,7 @@
 
 <view class="page-wrap">
   <view class="page-bg">
-    <image class="page-bg" src="../../resource/images/user/person2.gif" mode="aspectFill"></image>
+    <image class="page-bg" src="{{look_src}}" mode="aspectFill"></image>
   </view>
    <view class="head-wrap">
   </view>
