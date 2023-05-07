@@ -1,5 +1,9 @@
-# youyou-self-discipline
+#  Youyou Self-discipline Mini-app
 Wechat app for the spring 2022 software engineering practice course of Soochow University. We combine the two contradictory concepts of self-discipline and game to make our leisure-self-discipline project.
+
+## Video Introduction (Chinese)
+ [![Watch the video](https://img.youtube.com/vi/3k4A3mwBB-U/maxresdefault.jpg)](https://youtu.be/3k4A3mwBB-U)
+ * video link: https://youtu.be/3k4A3mwBB-U
 
 ## PPT Introduction
 <img width="851" alt="image" src="https://user-images.githubusercontent.com/56916034/236582389-65de8e1d-360c-4710-b1fe-b1f06e5d6f47.png">
